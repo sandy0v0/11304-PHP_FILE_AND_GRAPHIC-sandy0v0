@@ -30,9 +30,9 @@
 <!----建立上傳檔案表單及相關的檔案資訊存入資料表機制----->
 <?php
 include_once "function.php";
-/*echo $_POST['name'];
-echo "<br>";
-dd($_FILES);*/
+// /* echo $_POST['name'];
+// echo "<br>";
+// dd($_FILES); */
 
 if(isset($_FILES['img'])){
     if($_FILES['img']['error']==0){
@@ -54,15 +54,14 @@ $dirpath="./files";
 // $dir=opendir($dirpath);
 $items=scandir($dirpath);
 $items=array_diff($items,array('.','..'));
-dd($items);
+// dd($items);
 
 foreach($items as $file){
     echo "<div class='item'>";
     echo "<img src='{$dirpath}/{$file}'>";
+    echo "<a href='del_img.php?file={$file}'>刪除</a>";
     echo "</div>";
 }
-
-
 ?>
 
 
