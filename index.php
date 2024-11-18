@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a href="upload.php"><div class="types">表單檔案上傳</div></a>
-<a href="manage.php"><div class="types">檔案管理</div></a>
-<a href="text-import.php"><div class="types">文字檔案處理</div></a>
-<a href="image.php"><div class="types">圖形處理</div></a>
+<a class="types" href="upload.php"><div>表單檔案上傳</div></a>
+<a class="types" href="manage.php"><div>檔案管理</div></a>
+<a class="types" href="text-import.php"><div>文字檔案處理</div></a>
+<a class="types" href="image.php"><div>圖形處理</div></a>
 </body>
 </html>
