@@ -10,6 +10,7 @@
 <body>
 <a class="types" href="upload.php"><div>表單檔案上傳</div></a>
 <a class="types" href="manage.php"><div>檔案管理</div></a>
+<a class="types" href="show.php"><div>相簿</div></a>
 <a class="types" href="text-import.php"><div>文字檔案處理</div></a>
 <a class="types" href="image.php"><div>圖形處理</div></a>
 </body>
