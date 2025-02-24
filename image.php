@@ -124,8 +124,7 @@ imagejpeg($border_dst,"./images/border_{$_FILES['file']['name']}");
 <img src="<?="./images/border_{$_FILES['file']['name']}";?>" alt="">
 
 <!----產生圖形驗證碼----->
-
-
+<!-- ↑產生圖形驗證碼→改用catpcha.php說明 -->
 
 
 
