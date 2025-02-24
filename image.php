@@ -109,14 +109,16 @@ $border_color_green=imagecolorallocate($border_dst,0,255,0);
 $border_color_blue=imagecolorallocate($border_dst,0,0,255);
 
 // rallocate可以選定一個顏色(依來源去訂為一個顏色)，
-imagefilledrectangle($border_dst,0,0,($bwidth/2),($bheight/2),$border_color_red);
-imagefilledrectangle($border_dst,0,($bheight/2),($bwidth/2),($bheight/2),$border_color_blue);
-imagefilledrectangle($border_dst,($bwidth/2),0,($bwidth/2),$bheight,$border_color_green);
+// 用矩形的方式去填邊框顏色，採一層一層堆疊上去的
+echo $bwidth/2;
+echo $bheight/2;
+imagefilledrectangle($border_dst,0,0,round(($bwidth/2)),round(($bheight/2)),$border_color_red);
+imagefilledrectangle($border_dst,0,round(($bheight/2)),round(($bwidth/2)),$bheight,$border_color_blue);
+imagefilledrectangle($border_dst,round(($bwidth/2)),0,$bwidth,$bheight,$border_color_green);
 
 imagecopyresampled($border_dst,$src,$border,$border,0,0,$src_info[0],$src_info[1],$src_info[0],$src_info[1]);
 imagejpeg($border_dst,"./images/border_{$_FILES['file']['name']}");
 
-// 用矩形的方式去填邊框顏色，採一層一層堆疊上去的
 
 ?>
 <img src="<?="./images/border_{$_FILES['file']['name']}";?>" alt="">
